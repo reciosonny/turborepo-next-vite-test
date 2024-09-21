@@ -14,9 +14,14 @@ export default function Home() {
         This shadcn/ui button is shared between Next.js, Vite and any other
         application.
       </p>
+      <p>Adding another content here to test further</p>
+
+      <br /><br /><br />
       <Button onClick={() => setCount((count) => count + 1)}>
         Count is {count}
       </Button>
+      <br />
+      <br />
       <CardWithForm />
     </main>
   );
