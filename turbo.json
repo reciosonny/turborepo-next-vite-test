@@ -13,6 +13,17 @@
         "!.next/cache/**"
       ]
     },
+    "build:nextjs": {
+      "outputs": [
+        "apps/nextjs/.next/**",
+        "!.next/cache/**"
+      ]
+    },
+    "build:vite": {
+      "outputs": [
+        "apps/vite/dist/**"
+      ]
+    },
     "lint": {
       "dependsOn": [
         "^lint"
@@ -21,6 +32,14 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "build:production": {
+      "dependsOn": [
+        "build:nextjs"
+      ],
+      "outputs": [
+        "apps/nextjs/.next/**"
+      ]
     }
   }
 }
