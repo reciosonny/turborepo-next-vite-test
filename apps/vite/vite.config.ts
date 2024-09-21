@@ -10,4 +10,14 @@ export default defineConfig({
       "@ui": path.resolve(__dirname, "../../packages/ui/src"),
     },
   },
+  build: {
+    outDir: "./browser-extensions/chrome/dist",
+    rollupOptions: {
+      output: {
+        entryFileNames: "[name].js",
+        chunkFileNames: "[name].js",
+        assetFileNames: "[name].[ext]",
+      },
+    },
+  },
 });
