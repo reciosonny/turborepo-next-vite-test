@@ -1,12 +1,19 @@
-// import React from "react";
 import ReactDOM from "react-dom/client";
+// import React from "react";
 
 import "@repo/ui/globals.css";
+// import { Button } from "@ui/components/ui/button.tsx";
+import { DialogDemo } from "@ui/components/ui/DialogSample";
+
+
 // import App from "./App.tsx";
+import { ThemeProvider } from "./ThemeProvider.tsx";
 
 // ReactDOM.createRoot(document.getElementById("root")!).render(
 //   <React.StrictMode>
-//     <App />
+//     <ThemeProvider>
+//       <App />
+//     </ThemeProvider>
 //   </React.StrictMode>,
 // );
 
@@ -24,11 +31,9 @@ import "@repo/ui/globals.css";
 
   const newElement = document.createElement("div");
   ReactDOM.createRoot(newElement).render(
-    <div>
-      <button onClick={() => alert('you clicked a button')} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Submit
-      </button>
-    </div>,
+    <ThemeProvider>
+      <DialogDemo />
+    </ThemeProvider>,
   );
 
   el.appendChild(newElement); //append the new element

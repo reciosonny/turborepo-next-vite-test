@@ -77,6 +77,7 @@ const config = {
     },
   },
   plugins: [tailwindcssAnimate],
+  important: true,
 } satisfies Config;
 
 export default config;

@@ -3,6 +3,7 @@ import { Button } from "@repo/ui/components/ui/button";
 
 import "@repo/ui/globals.css";
 import { CardWithForm } from "@ui/components/ui/CardWithForm";
+import { DialogDemo } from "@ui/components/ui/DialogSample";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,6 +19,8 @@ function App() {
         Count is {count}
       </Button>
       <CardWithForm />
+
+      <DialogDemo />
     </div>
   );
 }
